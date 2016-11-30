@@ -40,5 +40,4 @@ if (paste) {
 if (!copy && !paste) {
     helpMessage();
 }
-// helpMessage();
 
