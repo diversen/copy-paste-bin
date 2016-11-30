@@ -10,8 +10,8 @@ Nodejs copy and paste from clipboard in CLI mode
 
 copy: 
 
-  copy-paste --copy='copied to the clipboard'
+    copy-paste --copy='copied to the clipboard'
 
 paste (will output to the console): 
  
-  copy-paste --paste
+    copy-paste --paste
