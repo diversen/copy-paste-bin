@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.10.9
+3 info using node@v4.6.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/dennis/copy-paste-bin',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/dennis/.npm/copy-paste-bin/1.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+10 info lifecycle copy-paste-bin@1.0.1~prepublish: copy-paste-bin@1.0.1
+11 silly lifecycle copy-paste-bin@1.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/dennis/.npm/copy-paste-bin/1.0.1/package.tgz',
+12 verbose tar pack   '/home/dennis/copy-paste-bin' ]
+13 verbose tarball /home/dennis/.npm/copy-paste-bin/1.0.1/package.tgz
+14 verbose folder /home/dennis/copy-paste-bin
+15 verbose addLocalTarball adding from inside cache /home/dennis/.npm/copy-paste-bin/1.0.1/package.tgz
+16 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd copy-paste-bin@1.0.1
+18 verbose afterAdd /home/dennis/.npm/copy-paste-bin/1.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/dennis/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/dennis/.npm/copy-paste-bin/1.0.1/package/package.json written
+21 silly publish { name: 'copy-paste-bin',
+21 silly publish   bin: { 'copy-paste': './cli.js' },
+21 silly publish   version: '1.0.1',
+21 silly publish   description: 'node copy-paste bin for cli usage',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/diversen/copy-paste-bin.git' },
+21 silly publish   keywords: [ 'copy-paste', 'clipboard', 'copy', 'paste' ],
+21 silly publish   author: { name: 'dennis iversen' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/diversen/copy-paste-bin/issues' },
+21 silly publish   homepage: 'https://github.com/diversen/copy-paste-bin#readme',
+21 silly publish   dependencies: { 'copy-paste': '^1.3.0', 'minimist-mini': '^1.0.0' },
+21 silly publish   readme: '# copy-paste-bin\n\nNodejs copy and paste from clipboard in CLI mode\n\n# Install\n\n    npm install copy-paste-bin -g\n\n# Usage: \n\ncopy: \n\n    copy-paste --copy=\'copied to the clipboard\'\n\npaste (will output to the console): \n \n    copy-paste --paste\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'cf8d9e6e4ffd26e0bc57f6193348cd41a86355c4',
+21 silly publish   _id: 'copy-paste-bin@1.0.1',
+21 silly publish   _shasum: 'd90338d75efdaacaaf0940f64a265902fdcd644e',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name copy-paste-bin
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'copy-paste-bin',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'copy-paste-bin',
+26 silly mapToRegistry   name: 'copy-paste-bin',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/copy-paste-bin
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/dennis/.npm/copy-paste-bin/1.0.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/copy-paste-bin
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 4:25:56 PM
+33 verbose request using bearer token for auth
+34 verbose request id 6e571d40538033e2
+35 http request PUT https://registry.npmjs.org/copy-paste-bin
+36 http 403 https://registry.npmjs.org/copy-paste-bin
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Sat, 03 Dec 2016 15:25:58 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-bma7030-BMA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1480778756.890866,VS0,VE1122',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /home/dennis/.npm/registry.npmjs.org/copy-paste-bin on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : copy-paste-bin
+40 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:87:13)
+40 verbose stack     at Request.emit (events.js:172:7)
+40 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:77:13)
+40 verbose stack     at Request.emit (events.js:169:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid copy-paste-bin
+43 verbose cwd /home/dennis/copy-paste-bin
+44 error Linux 3.16.0-77-generic
+45 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+46 error node v4.6.1
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.1." : copy-paste-bin
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

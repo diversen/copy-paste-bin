@@ -7,7 +7,6 @@ var mini = require('minimist-mini');
 m = new mini(opts);
 
 var ncp = require("copy-paste");
-var get = require('get-value');
 var fs = require('fs');
 var path = require('path');
 
@@ -30,8 +29,8 @@ if (m.get('paste')) {
     process.exit(0);
 }
 
+// Help
 if (!m.get('copy') && !m.get('paste')) {
     m.helpMessage();
 }
-// helpMessage();
 
