@@ -1,11 +1,17 @@
-# minimist-mini
+# copy-paste-bin
 
-Install: 
+Nodejs copy and paste from clipboard in CLI mode
 
-    npm install --save minimist-mini
+# Install
 
-Usage: 
+    npm install copy-paste-bin -g
 
-See [test.js](test.js)
+# Usage: 
 
-License: MIT 
+copy: 
+
+    copy-paste --copy='copied to the clipboard'
+
+paste (will output to the console): 
+ 
+    copy-paste --paste
