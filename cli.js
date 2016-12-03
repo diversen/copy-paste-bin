@@ -4,16 +4,17 @@ var opts = [];
 opts.boolean = ['paste'];
 opts.string = ['help', 'copy'];
 var argv = require('minimist')(process.argv.slice(2), opts);
-var ncp = require("copy-paste");
 var get = require('get-value');
 var fs = require('fs');
 var path = require('path');
+var removeMd = require('remove-markdown');
 
 // Help function
 function helpMessage () {
     var dirname = path.dirname(__filename);
     var help = fs.readFileSync(dirname + '/README.md', {encoding: 'utf8'});
-    console.log(help);
+    console.log(removeMd(help));
+
     process.exit(0);
 }
 
