@@ -3,8 +3,7 @@
 var opts = [];
 opts.boolean = ['paste'];
 opts.string = ['help', 'copy'];
-var mini = require('minimist-mini');
-m = new mini(opts);
+var m = require('minimist-mini');
 
 var ncp = require("copy-paste");
 var fs = require('fs');
