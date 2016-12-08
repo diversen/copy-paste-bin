@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
 var opts = [];
-opts.boolean = ['paste'];
-opts.string = ['help', 'copy'];
-var m = require('minimist-mini')();
+opts.boolean = ['paste', 'help'];
+opts.string = ['copy'];
 
+var m = require('minimist-mini')(opts);
 var ncp = require("copy-paste");
-var fs = require('fs');
-var path = require('path');
-
 
 // Help
 if (m.get('help')) {

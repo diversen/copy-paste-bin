@@ -3,7 +3,7 @@
   "bin": {
     "copy-paste": "./cli.js"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "node copy-paste bin for cli usage",
   "main": "index.js",
   "scripts": {
