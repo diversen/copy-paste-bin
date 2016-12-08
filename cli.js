@@ -3,7 +3,7 @@
 var opts = [];
 opts.boolean = ['paste'];
 opts.string = ['help', 'copy'];
-var m = require('minimist-mini');
+var m = require('minimist-mini')();
 
 var ncp = require("copy-paste");
 var fs = require('fs');
@@ -15,7 +15,7 @@ if (m.get('help')) {
     m.helpMessage();
 }
 
-//var copy = get(argv, 'copy');
+// Copy to clipboard
 if (m.get('copy')) {
     ncp.copy( m.get('copy'), function () {
         process.exit(0);
