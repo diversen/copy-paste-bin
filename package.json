@@ -19,6 +19,7 @@
     "copy",
     "paste"
   ],
+  "type": "module",
   "author": "dennis iversen",
   "license": "MIT",
   "bugs": {
