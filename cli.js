@@ -55,15 +55,11 @@ if (minimistMini.getOption('copy')) {
         process.exit(0);
     });
 } else if (minimistMini.getOption('paste')) {
-    ncp.paste(function (err, data) {
-        ncpError(err);
-        console.log(data);  
-    });
-    
+    console.log(ncp.paste());
+    process.exit(0);
 } else {
     // Check if there is piped input
     if (!process.stdin.isTTY) {
-        console.log('Piped input detected');
         handlePipedInput();
     } else if (!minimistMini.getOption('copy') && !minimistMini.getOption('paste')) {
         minimistMini.helpMessage();
